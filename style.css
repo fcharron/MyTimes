@@ -1,0 +1,32 @@
+body{
+  margin: 0;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  font-family: Verdana;
+  font-size: 14px;
+  font-weight: bold;
+
+  padding: 10px 30px;
+  border-bottom: 1px solid black;
+}
+
+/* My Times h1 */
+#logo {
+  color: mediumaquamarine;
+  display: flex;
+  align-items: center;
+}
+
+#logo-text {
+  padding: 0 10px;
+}
+
+header nav li {
+  display: inline;
+  padding: 0 20px;
+}
