@@ -1,22 +1,12 @@
+/* General */
 body{
-  margin: 0;
+  margin: 0; /* undo browser default */
   font-family: Georgia;
-}
-
-p {
   font-size: 17px;
   color: black;
 }
 
-ul{
-  padding: 0 40px 0 0;
-}
-
-/* For debugging */
-div {
-  border: solid black 1px;
-}
-
+/* Header */
 header {
   display: flex;
   align-items: center;
@@ -26,17 +16,59 @@ header {
   font-weight: bold;
 
   border-bottom: 1px solid black;
+
+  position: fixed;
+  top: 0px;
+  padding: 0 20px 0 0;
+  width: 100%;
+
+  z-index: 2;
+  background-color: white;
+}
+
+header nav {
+  padding: 0 40px 0 0;
+}
+
+header nav span{
+  display: inline-block;
+  padding: 0 10px;
+}
+
+/* logo + My Times title */
+#logo {
+  color: mediumaquamarine;
+  display: flex;
+  flex-grow: 1;
+  align-items: center;
+  padding: 0 30px;
+  margin: 10px 0;
+}
+
+/* My Times title */
+#logo-text {
+  padding: 0 10px;
+}
+
+/* Main */
+#contents {
+  position: relative;
+  top: 70px; /* height of header */
 }
 
 main {
+  position: relative;
   display: flex;
-  margin: 40px 0 0 0;
+  margin: 40px 0 80px 0;
 }
 
 .image {
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
   background-size: contain;
+  height: 300px;
 }
 
 .headline {
@@ -51,17 +83,14 @@ main {
 #mother {
   background-image: url("https://s3.amazonaws.com/codecademy-content/courses/freelance-1/unit-4/img-story-main.png");
   text-align: left;
-  height: 300px;
 }
 
 #earth {
   background-image: url("https://s3.amazonaws.com/codecademy-content/courses/freelance-1/unit-4/img-story-2.png");
-  height: 300px;
 }
 
 #research {
   background-image: url("https://s3.amazonaws.com/codecademy-content/courses/freelance-1/unit-4/img-story-3.png");
-  height: 300px;
 }
 
 #cats {
@@ -75,12 +104,29 @@ main {
 
 .column{
   display: flex;
-
-  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  
   flex-shrink: 0;
   flex-grow: 0;
   
   margin: 0 35px 0 0;
+}
+
+#main-story {
+  width: 630px;
+}
+
+.column.large .article {
+  width: 300px;
+}
+
+#stories {
+  display: flex;
+}
+
+#stories .text{
+  height: 250px;
 }
 
 .column.large{
@@ -92,24 +138,68 @@ main {
 }
 
 .column.small{
+  flex-direction: column;
   width: 240px;
 }
 
-/* My Times h1 */
-#logo {
-  color: mediumaquamarine;
+.column.small #news-bites {
+  background-color: whitesmoke;
+  font-family: Verdana;
+  font-size: 12px;
+  color: dimgray;
+}
+
+.column.small #news-bites div {
+  padding: 10px 20px;
+  border-bottom: solid black 1px;
+}
+
+h2 {
+  font-size: 30px;
+  font-weight: bold;
+  margin: 0;
+}
+
+h3 {
+  text-align: center;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+/* Footer */
+footer{
   display: flex;
-  flex-grow: 1;
+  flex-direction: column;
+  justify-content: center;
   align-items: center;
-  padding: 0 30px;
-  margin: 10px 0;
+  margin: auto;
+  height: 325px;
+  width: 100%;
+
+  background-color: mediumaquamarine;
+  font-family: Verdana;
+  font-size: 12px;
+  position: relative;
 }
 
-#logo-text {
-  padding: 0 10px;
+footer div{
+  margin: 10px;
 }
 
-header nav li {
+footer nav{
+  padding: 0 20px;
   display: inline;
-  padding: 0 10px;
+}
+
+footer nav span{
+  padding: 10px;
+}
+
+#footer-title{
+  font-family: Georgia;
+  font-size: 16px;
+  font-weight: bold;
+  color: white;
+  padding: 0 20px;
+  border-right: white solid 2px;
 }
